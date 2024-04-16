@@ -9,28 +9,29 @@ const collectEmployees = function () {
     const firstName = prompt("Enter First Name");
     const lastName = prompt("Enter Last Name");
     let Salary = prompt("Enter Salary");
-    if (isNaN(Salary) || Salary === null){ 
-    Salary = 0;
+    if (isNaN(Salary) || Salary === null) {
+      Salary = 0;
     }
+  }
+  let employee = {
+    firstName: firstName,
+    lastName: lastName,
+    Salary: parseFloat(Salary)
+  };
+  decision = confirm("Employee saved.Add another employee?'");
 
-let employee = {
-  firstName: firstName,
-  lastName: lastName,
-  Salary: parseFloat(Salary)
-};
-decision = confirm("Employee saved.Add another employee?'");
+  allEmployees.push(employee);
 
-allEmployees.push(employee);
-
-return allEmployee;
+  return allEmployee;
+}
   // TODO: Get user input to create and return an array of employee objects
 
-//get user data and add a loop specifically while loop(while this is true do this
-//get first name 
-//get last name//
-//get salary )
+  //get user data and add a loop specifically while loop(while this is true do this
+  //get first name 
+  //get last name//
+  //get salary )
 
-;
+  ;
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   const displayAverageSalary = function (employeesArray) {
@@ -50,11 +51,11 @@ const displayAverageSalary = function (employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
- let randomEmployee = Math.floor(Math.random() * employeesArray.length);
-    alert('Congrats to ${employeesArray[randomEmployee].firstName} ${employeesArray[randomEmployee].lastName} for being randomly selected')
-    console.log(getRandomEmployee);
-  }
-  // TODO: Select and display a random employee
+  let randomEmployee = Math.floor(Math.random() * employeesArray.length);
+  alert('Congrats to ${employeesArray[randomEmployee].firstName} ${employeesArray[randomEmployee].lastName} for being randomly selected')
+  console.log(getRandomEmployee);
+}
+// TODO: Select and display a random employee
 
 
 /*
@@ -121,4 +122,4 @@ const trackEmployeeData = function () {
 }
 
 // Add event listener to 'Add Employees' button
-addEmployeesBtn.addEventListener('click', trackEmployeeData ();
+addEmployeesBtn.addEventListener("click", "trackEmployeeData")
